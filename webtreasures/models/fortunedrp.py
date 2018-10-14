@@ -37,3 +37,18 @@ class IncomeDetail(models.Model):
         db_table = 'income_detail'
         verbose_name = '收入明细'
         verbose_name_plural = '收入明细'
+
+
+# 服装信息
+class GoodsInfo(models.Model):
+    goods_code = models.CharField(verbose_name=u'商品编码', unique=True, max_length=100, default='', null=False, db_column='goods_code')
+    fashion_style = models.CharField(verbose_name=u'服装款式', max_length=100, default='', null=False, db_column='fashion_style')
+    sell_status = models.IntegerField(verbose_name=u'卖出状态', default=0, null=False, db_column='sell_status')
+    add_date = models.DateTimeField(verbose_name=u'数据创建日期', auto_now_add=True)
+    mod_date = models.DateTimeField(verbose_name=u'数据更新日期', auto_now=True, null=True)
+    logic_del = models.IntegerField(verbose_name=u'逻辑删除', default=0, null=False, db_column='logic_del')
+
+    class Meta:
+        db_table = 'goods_info'
+        verbose_name = '服装信息'
+        verbose_name_plural = '服装信息'
