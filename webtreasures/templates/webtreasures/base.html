@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/plugins/uikit-3.0.0-rc.19/css/uikit.css"/>
+    <script src="/static/plugins/jquery-3.3.1.min.js" type="application/javascript"></script>
+    <script src="/static/plugins/jquery-migrate.min.js" type="application/javascript"></script>
+    <script src="/static/plugins/uikit-3.0.0-rc.19/js/uikit.min.js" type="application/javascript"></script>
+    <script src="/static/plugins/uikit-3.0.0-rc.19/js/uikit-icons.js" type="application/javascript"></script>
+    <script src="/static/plugins/vue.min.js" type="application/javascript"></script>
+
+    {% block css %} {% endblock %}
+</head>
+<body>
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+                    Features
+                </a>
+            </li>
+        </ul>
+
+        <div class="uk-navbar-item">
+            <div>Some <a href="#">Link</a></div>
+        </div>
+
+        <div class="uk-navbar-item">
+            <form action="javascript:void(0)">
+                <input class="uk-input uk-form-width-small" type="text" placeholder="Input">
+                <button class="uk-button uk-button-default">Button</button>
+            </form>
+        </div>
+
+    </div>
+</nav>
+{% block content %} {% endblock %}
+
+{% block js %} {% endblock %}
+</body>
+</html>
