@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from webtreasures.views import fortunedrp
 
 """
 url()函数可以传递4个参数，其中2个是必须的：regex和view，以及2个可选的参数：kwargs和name。下面是具体的解释：
@@ -40,4 +41,5 @@ name：
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^getincometype/$', fortunedrp.getincometype, name='getincometype')
 ]
